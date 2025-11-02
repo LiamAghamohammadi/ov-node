@@ -12,8 +12,8 @@ NC="\033[0m"
 
 apt update -y
 apt install -y python3 python3-pip wget curl git -y
-pip3 install --upgrade pip
-pip3 install colorama pexpect requests uuid
+pip3 install --upgrade pip --break-system-packages
+pip3 install colorama pexpect requests uuid --break-system-packages
 
 if [ ! -d "$INSTALL_DIR" ]; then
     echo -e "${YELLOW}Downloading latest release...${NC}"
